@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>user login</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+<style>
+body
+{
+
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial';
+ background-image: url("login_main_background.jpg");
+}
+
+
+ .background {
+            position: fixed;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background-image: url("login_main_background.jpg");
+            background-size: auto;
+            background-position: center;
+             filter: blur(10px);
+            z-index: -1;
+              }
+
+.login{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        margin: auto;
+        padding: 20px;
+        background-image: url("login_main_background.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 200%;
+        background-position: center;
+        border-radius: 50px 5px ;
+  
+}
+
+       
+.heading{
+    text-align: center;
+    color: #FFFFFF;
+}
+
+label{
+    color: #0096FF;
+    font-size: 17px;
+}
+#Uname{ 
+    text-align: center;
+    float: 50%;
+    color: #277582;
+    width: 70%;
+    height: 30px;
+    margin: auto;
+    display: block;
+    border: none;
+    border-radius: 5px;
+}
+#Pass{ 
+    text-align: center;
+    float: center;
+    color: #277582;
+    width: 70%;
+    display: block;
+    margin: auto;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+
+}
+ #log{
+    
+    float: center;
+        height: 30px;
+        width: 70%;
+    border: none;
+    display: block;
+    margin: auto;
+    border-radius: 17px;
+    color: white;
+    background-color: 	#0096FF;
+
+
+}
+span{
+    color: white;
+    font-size: 17px;
+    justify-content: center;
+}
+a{
+     color: #0096FF;
+}
+
+.loginalign{
+    display: block;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+}
+
+ img {
+  display: block;
+  margin: auto;
+  width: 25%;
+  border-radius: 50%;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+    display: block;
+    margin: auto;
+}
+
+.remember-me label {
+  margin-right: 20px; 
+}
+
+.forgot-password {
+  margin-left: 20px;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+@keyframes rotate {
+	100% {
+		transform: rotate(1turn);
+	}
+}
+
+  
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 90deg;
+  inherits: false;
+}
+
+:root {
+  --bg-background: #111827;
+  --clr-card: #1f2937;
+  --clr-1: #6420aa;
+  --clr-2: #ff3ea5;
+  --clr-3: #ff7ed4;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+      display: block;
+    margin: auto;
+  position: relative;
+  height: 600px;
+  width: 50%;
+  border-radius: 50px 5px;
+  cursor: pointer;
+  background-color: var(--clr-card);
+}
+
+.card::after,
+.card::before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  inset: -0.5rem;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--clr-card),
+    var(--clr-1),
+    var(--clr-2),
+    var(--clr-3),
+    var(--clr-2),
+    var(--clr-1),
+    var(--clr-card)
+  );
+  border-radius: inherit;
+  animation: rotate 2.5s linear infinite;
+}
+
+.card::after {
+  filter: blur(3rem);
+}
+
+@keyframes rotate {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}
+
+
+
+</style>
+</head>
+<body>
+<div class="background"></div>
+<br><br><br> <br> <br>
+
+ <div class="heading"><h1>USER LOGIN</h1></div>
+    <br><br>
+     <div class="card">
+    <div class="login">
+    <div class="loginalign">
+    <form id="login" method="get" action="login.php">
+        <br><br><img src="user.png"><br>
+        <label><b>User Name
+        </b><br>
+        </label>
+        <input type="text" name="Uname" id="Uname" placeholder="Username">
+        <br><br>
+        <label><b>Password
+        </b><br>
+        </label>
+        <input type="Password" name="Pass" id="Pass" placeholder="Password">
+        <br><br>
+        <input type="button" name="log" id="log" value="Log In Here">
+        <br><br>
+   <div class="remember-me">
+  <input type="checkbox" id="check">
+  <label for="check">Remember me</label>
+  <span class="forgot-password">Forgot <a href="#">Password</a></span>
+</div>
+    </form>
+</div></div></div> <br><br> <br><br>
+</body>
+</html>
