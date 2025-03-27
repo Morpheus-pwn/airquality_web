@@ -1,0 +1,205 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #Fff;
+    animation: loader 2s infinite ease;
+}
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease-in;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it stays in the background */
+}
+.content {
+    position: relative;
+    z-index: 1; /* Place content above the background */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-left: 10%;
+    padding-right: 10%;   
+}
+.content ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+.content ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+}
+.content ul li a:hover {
+    color: #DCCEAC;
+    transition: color 0.3s ease;
+}
+.content button {
+    border: none;
+    outline: none;
+    padding: 12px 30px;
+    background: #DCCEAC;
+    border-radius: 30px;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.content button:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+main{
+    flex-direction: column;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    min-height: calc(90vh - 6rem);
+    max-width: 40rem;
+    margin-left: 10%;
+    z-index: 999;
+}
+
+.tag-box {
+    position: relative;
+    width: 18rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    background: linear-gradient(to right,#656565,#1B9FC0,#147A94,#1B9FC0,#656565);
+    background-color: 200%;
+    animation: animationGradient 2.5s linear infinite;
+    box-shadow: 0 0 15px #DCCEAC;
+}
+
+@keyframes animationGradient {
+    to{
+        background-position: 200%;
+    }
+}
+
+.tag-box .tag{
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    background-color: none ;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.tag-box .tag:hover{
+    color: black ;
+}
+
+.main h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    margin: 2rem 0;
+    line-height: 1.2;
+    text-shadow: 0 0 10px black;
+}
+
+.description{
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    max-width: 35rem;
+    color: #fff5eb;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn-signing-main{
+    text-decoration: none;
+    background-color: lightgray;
+    color: royalblue;
+    padding: 0.6rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.btn-signing-main:hover{
+    background-color: white;
+}
+
+.img-container{
+    position: absolute;
+    bottom: 20%;
+    right: -25%;
+    --b: 4px;  /* the border thickness*/
+    --g: 10px; /* the gap */
+    --c: #411D2B;
+  
+    padding: calc(var(--b) + var(--g));
+    background:
+        linear-gradient(var(--c) var(--b),#0000 0 calc(100% - var(--b)), var(--c) 0) 
+        12.5%/20% 100% no-repeat,
+        linear-gradient(90deg,var(--c) var(--b),#0000 0 calc(100% - var(--b)), var(--c) 0) 
+        50% -100%/100% 200% no-repeat;
+    transition: 
+        .3s .3s background-size,
+        .3s background-position,
+        .4s transform;
+    cursor: pointer;
+}
+
+.img-container:hover{
+    background-size: 100% 100%, 100% 200%;
+    background-position: 50%,50% 0%;
+    transition: 
+        .3s     background-size,
+        .3s .3s background-position,
+        .4s transform;
+    transform: scale(1.07);
+}
+
+
