@@ -170,36 +170,3 @@ main{
 .btn-signing-main:hover{
     background-color: white;
 }
-
-.img-container{
-    position: absolute;
-    bottom: 20%;
-    right: -25%;
-    --b: 4px;  /* the border thickness*/
-    --g: 10px; /* the gap */
-    --c: #411D2B;
-  
-    padding: calc(var(--b) + var(--g));
-    background:
-        linear-gradient(var(--c) var(--b),#0000 0 calc(100% - var(--b)), var(--c) 0) 
-        12.5%/20% 100% no-repeat,
-        linear-gradient(90deg,var(--c) var(--b),#0000 0 calc(100% - var(--b)), var(--c) 0) 
-        50% -100%/100% 200% no-repeat;
-    transition: 
-        .3s .3s background-size,
-        .3s background-position,
-        .4s transform;
-    cursor: pointer;
-}
-
-.img-container:hover{
-    background-size: 100% 100%, 100% 200%;
-    background-position: 50%,50% 0%;
-    transition: 
-        .3s     background-size,
-        .3s .3s background-position,
-        .4s transform;
-    transform: scale(1.07);
-}
-
-
