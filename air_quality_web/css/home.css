@@ -35,7 +35,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    /*overflow: scroll;*/
+    
 }
 
 .animated-background {
@@ -43,7 +43,7 @@ html, body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 903px;
     z-index: -1; /* Ensure it stays in the background */
 }
 .content {
@@ -150,8 +150,8 @@ main{
 
 .b-example-divider {
     width: 100%;
-    height: 3rem;
-    background-color: rgba(0, 0, 0, .1);
+    height: 1rem;
+    background-color: #DCCEAC;
     border: solid rgba(0, 0, 0, .15);
     border-width: 1px 0;
     box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
@@ -163,10 +163,10 @@ main{
     gap: 1rem;
 }
 
-.py-5{
+/*.py-5{
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
-}
+}*/
 
 .g-4, .gy-4 {
     --bs-gutter-y: 1.5rem;
@@ -303,7 +303,7 @@ img, svg {
 
 .text-body-emphasis {
     --bs-text-opacity: 1;
-    color: var(--bs-emphasis-color) !important;
+    color: white !important; /*rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important; */
 }
 
 .feature p {
@@ -315,6 +315,7 @@ img, svg {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     unicode-bidi: isolate;
+    color: #DCCEAC;
 }
 
 div {
@@ -324,11 +325,11 @@ div {
 
 .btn-signing-main{
     text-decoration: none;
-    background-color: lightgray;
+    background-color: #DCCEAC; 
     color: royalblue;
     padding: 0.6rem 2.5rem;
     border-radius: 50px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-align: center;
@@ -341,10 +342,51 @@ div {
 
 .img-container{
     position: absolute;
-    bottom: 20%;
+    bottom: 9%;
     right: -25%;
 }
 
+.py-3 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+.my-4 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+}
+.align-items-center {
+    align-items: center !important;
+}
+.justify-content-between {
+    justify-content: space-between !important;
+}
+.flex-wrap {
+    flex-wrap: wrap !important;
+}
+.border-bottom {
+    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.nav-item {
+    text-decoration-color: black !important;
+}
+
+footer {
+    display: block;
+    unicode-bidi: isolate;
+    background-color: #DCCEAC;
+}
+
+body{ margin:0; font:normal 75% Arial, Helvetica, sans-serif; } 
+canvas{ display: block;} /* ---- particles.js container ---- */ 
+#particles-js{ position: absolute; width: 1522px; height: 686px; background-color: #5218FA; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; top: 918px; left: 0px; right: 0px; bottom: 1600px; } /* ---- stats.js ---- */
+.js-count-particles{ font-size: 1.1em; } #stats, 
+#stats{ border-radius: 3px 3px 0 0; overflow: hidden; } 
+.count-particles{ border-radius: 0 0 3px 3px; }
 
 
 
