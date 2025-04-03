@@ -35,7 +35,6 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  
 }
 
 .animated-background {
@@ -43,7 +42,7 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 903px;
+  height: 918px;
   z-index: -1; /* Ensure it stays in the background */
 }
 .content {
@@ -88,53 +87,83 @@ html, body {
   cursor: pointer;
 }
 
-.tag-box {
-  position: relative;
-  width: 18rem;
-  height: 2.5rem;
-  border-radius: 50px;
-  background: linear-gradient(to right,#656565,#1B9FC0,#147A94,#1B9FC0,#656565);
-  background-color: 200%;
-  animation: animationGradient 2.5s linear infinite;
-  box-shadow: 0 0 15px #DCCEAC;
+.container, .container-lg, .container-md, .container-sm {
+  max-width: 960px;
 }
 
-@keyframes animationGradient {
-  to{
-      background-position: 200%;
-  }
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x)* .5);
+  padding-left: calc(var(--bs-gutter-x)* .5);
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.tag-box .tag{
-  position: absolute;
-  inset: 3px 3px 3px 3px;
-  background-color: none ;
-  border-radius: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.5s ease;
-  cursor: pointer;
+.py-5 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
 }
 
-.tag-box .tag:hover{
-  color: black ;
+.px-4 {
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
 }
 
-.main h1 {
-  font-size: 4.5rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  margin: 2rem 0;
+.display-5 {
+  font-size: calc(1.425rem + 2.1vw);
+  font-weight: 300;
   line-height: 1.2;
-  text-shadow: 0 0 10px black ;
 }
 
-.description{
-  font-size: 1.3rem;
-  letter-spacing: 0.05em;
-  max-width: 35rem;
-  color: #fff5eb;
+.fw-bold {
+  font-weight: 700 !important;
+}
+
+.b-example-divider {
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.fs-4 {
+  font-size: calc(1.275rem + .3vw) !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.text-bg-dark {
+  color: #fff !important;
+  background-color: RGBA(var(--bs-dark-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+
+.main p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+  color: white
+}
+
+.border {
+  border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
 }
 
 .b-example-divider {
@@ -152,33 +181,7 @@ html, body {
   gap: 1rem;
 }
 
-/*.py-5{
-  padding-top: 3rem !important;
-  padding-bottom: 3rem !important;
-}*/
 
-.g-4, .gy-4 {
-  --bs-gutter-y: 1.5rem;
-}
-
-.g-4, .gx-4 {
-  --bs-gutter-x: 1.5rem;
-}
-
-.py-3{
-  padding-right: 1.5rem !important;
-  padding-left: 1.5rem !important;
-}
-
-.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
-  width: 100%;
-  padding-right: calc(var(--bs-gutter-x)* .5);
-  padding-left: calc(var(--bs-gutter-x)* .5);
-  margin-right: auto;
-  margin-left: auto;
-}
 
 *, ::after, ::before {
   box-sizing: border-box;
@@ -218,8 +221,7 @@ h2 {
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
-  display: flex
-;
+  display: flex;
   flex-wrap: wrap;
   margin-top: calc(-1* var(--bs-gutter-y));
   margin-right: calc(-.5* var(--bs-gutter-x));
@@ -363,6 +365,43 @@ div {
 .nav-item {
   text-decoration-color: black !important;
 }
+
+.about {
+  display: block;
+  padding: 50px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about h1 {
+  font-size: 2rem;
+  color: black !important;
+}
+
+.about p {
+  font-size: 1.5rem;
+  color: white !important;
+  margin-top: 10px;
+}
+
+.mission {
+  display: block;
+  color: black !important;
+  text-align: center;
+  padding: 50px;
+}
+
+.mission h2 {
+  font-size: 2rem;
+  color: black !important;
+}
+
+.mission p {
+  font-size: 1.5rem;
+  color: white !important;
+}
+
+
 
 footer {
   display: block;
